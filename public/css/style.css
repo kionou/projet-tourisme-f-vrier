@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Petit+Formal+Script&display=swap');
+
+body{
+     font-family: 'Akaya Telivigala', cursive;
+}
+.banner-image{
+    background: url('/images/téléchargement.jpg') center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.block{
+    padding: 0 !important;
+}
+
+.image{
+    /* height: 20rem;
+    width: 30rem; */
+    margin: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+.image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.images img{
+    width: 100%;
+    transition: .5s all;
+    margin-right: 10px;
+
+}
+.images .card-img{
+    overflow: hidden;
+}
+.images img:hover{
+    transform: scale(2.2);
+    transition: .8s ease-in;
+}
+.images .card{
+width: 100%;
+}
