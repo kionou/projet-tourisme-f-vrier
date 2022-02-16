@@ -12,4 +12,8 @@ app.get('/contact', (req,res)=>{
  res.render('contact')  
 })
 
+app.get('/destination', (req,res)=>{
+    res.render('destination')  
+   })
+
 app.listen(7070)
