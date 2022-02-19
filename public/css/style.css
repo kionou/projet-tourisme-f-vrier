@@ -2,6 +2,7 @@
 
 body{
      font-family: 'Akaya Telivigala', cursive;
+     background-color: antiquewhite;
 }
 .banner-image{
     background: url('/images/téléchargement.jpg') center;
