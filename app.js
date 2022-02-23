@@ -12,8 +12,17 @@ app.get('/contact', (req,res)=>{
  res.render('contact')  
 })
 
-app.get('/destination', (req,res)=>{
+app.get('/Dakar', (req,res)=>{
     res.render('destination')  
    })
+
+app.get('/Somone', (req,res)=>{
+    res.render('DestinationSomone')  
+   })
+
+app.get('/Saly', (req,res)=>{
+    res.render('DestinationSaly')  
+   })
+
 
 app.listen(7070)
