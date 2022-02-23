@@ -25,4 +25,17 @@ app.get('/Saly', (req,res)=>{
    })
 
 
+   app.get('/Joal-Fadiouth', (req,res)=>{
+    res.render('DestinationJoal')  
+   })
+
+   app.get('/Sine-Saloum', (req,res)=>{
+    res.render('DestinationSine')  
+   })
+
+   app.get('/Popenguine-Ndayane', (req,res)=>{
+    res.render('DestinationNianing')  
+   })
+
+
 app.listen(7070)
