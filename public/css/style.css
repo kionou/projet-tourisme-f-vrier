@@ -1,14 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Petit+Formal+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&display=swap');
 
-body{
-     font-family: 'Akaya Telivigala', cursive;
-     background-color: antiquewhite;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Abhaya Libre', serif;
+    font-size: 1.2rem;
 }
+
 .banner-image{
-    background: url('/images/téléchargement.jpg') center;
+    background: url('/images/sally.jpg') center;
     background-size: cover;
     height: 100vh;
     width: 100%;
+}
+
+
+.titre{
+    color: #fff;
+    font-weight: 700;
+    font-style: italic;
+}
+.headerTexte{
+    font-style: oblique;
+    font-weight: 400;
+    font-size: large;
+
 }
 
 
@@ -57,14 +75,20 @@ width: 100%;
 .single-works .title {
     font-size: 25px;
     font-weight: 700;
-    color: tomato;
+    color: orange;
     margin: 0 0 15px 0;
 }
 .overlay-text .post{
-    display: block;
-    font-weight: 600;
+    background: orange;
+    font-weight: bold;
     font-size: 20px;
     color: #fff;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: 0.4s ease-in-out;
+}
+.overlay-text .post:hover{
+   color: #000;
 }
 
 .single-works .overlay-text{
@@ -78,7 +102,7 @@ width: 100%;
     opacity: 0;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0;   
     transition: all 0.6s ease 0s;
 }
 .single-works .overlay-text::before{
@@ -86,6 +110,7 @@ width: 100%;
     border-right: 1px solid rgba(255,255,255,0.9);
     left: 30px;
     right: 30px;
+
 }
 
 .single-works .overlay-text::after{
@@ -93,29 +118,32 @@ width: 100%;
     border-bottom: 1px solid rgba(255,255,255,0.9);
     top: 30px;
     bottom: 30px;
-}
+ }
+ /*
 .single-works .overlay-text::before, .single-works .overlay-text::after{
     content: '';
     position: absolute;
     top: 20px;
     left: 20px;
-    bottom: 20px;
+    bottom: 20px; 
     right: 20px;
     opacity: 0;
     z-index: 1;
     transform: scale(1.5);
     transition: all 0.6s ease 0.2s;
-}
+} */
 .single-works:hover{
     transform: translateY(-8px);
+    
 }
 .single-works:hover .overlay-text{
     opacity: 1;
 }
+/* 
 .single-works:hover .overlay-text::before,
 .single-works:hover .overlay-text::after{
     opacity:1 ;
     transform: scale(1);
 
-}
+} */
  

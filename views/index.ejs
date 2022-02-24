@@ -11,9 +11,9 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top p md-3 container">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top p md-3 container-fluid">
        <div class="container">
-            <a class="navbar-brand" href="#">Travel.</a>
+            <a class="navbar-brand" href="/">Travel.</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,19 +22,19 @@
                 <div class="mx-auto"></div>
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/">Accueil <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link text-white" href="#">about</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Destinations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">services</a>
+                        <a class="nav-link text-white" href="#">Conctact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">galllery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">reservation</a>
+                        <a class="nav-link text-white" href="#">Reservation</a>
                     </li>
                 </ul>
             </div>
@@ -43,28 +43,39 @@
     </nav>
    <div class=" banner-image  d-flex justify-content-center align-items-center">
        <div class="content text-center">
-        <h1 class="text-dark">tourism senegal</h1>
+        <h1 class="text-dark">Guide touristique pour visiter le Littoral Sénégalais et bien préparer son voyage</h1>
        </div>
    </div>
  
 </header>
 
 <section class="about" id="about">
-    <h2 class="text-center">A propos de nous</h2>
+    <h2 class="text-center">Partez en voyage au Sénégal</h2>
    <div class="container">
    <div class="row">
-       <div class=" col-lg-6 col-md-6 col-sm-12">
+       <div class=" col-lg-12 col-md-12 col-sm-12">
             <div class="text-center  ">
-                <h1>Lorem ipsum dolor, sit amet </h1>
-                <p>Pour nos clients, nous avons prévu une variété d'activités et de destinations touristiques, ainsi que des expériences
-                inoubliables. La randonnée est un passe-temps apaisant qui consiste à se rendre dans une belle région et à y passer la
-                nuit. Nous avons une centaine de clients qui viennent avec nous en Turquie et qui sont fascinés par la beauté naturelle
-                de la nation.</p>
+                <p>
+            Le Sénégal n’offre sans doute pas les paysages les plus somptueux d’Afrique, mais il possède des sites inoubliables qui
+            vous apporteront un dépaysement total. Ses parcs nationaux, comme celui du Djoudj, au nord de Saint-Louis, riche en
+            oiseaux de toutes sortes ou celui du delta du Saloum, avec ses îles, sans parler de la Casamance, région encore trop
+            méconnue du grand public, où l’on se perd avec délices dans un réseau de bolongs, dans la mangrove, ont tout pour
+            séduire le voyageur. Et pour ceux qui ne souhaiteraient pas trop se fatiguer, ses plages agréables, bordées d’une
+            végétation luxuriante et variée, sont déjà une belle promesse de vacances dépaysantes.
+            Un des atouts qui rendent ce pays singulièrement attachant est sa population enjouée, communicative et accueillante.
+            Si la période coloniale a laissé au Sénégal des traces indéniables telles que la langue française, parler la même langue
+            ne signifie pas forcément le même langage. Après plus de 50 ans d’indépendance, les mentalités au Sénégal reflètent les
+            préoccupations économiques internes, une perception du monde, une observation des attitudes occidentales via le
+            tourisme, la conformité aux règles exigées par la tradition et, enfin, le renforcement de l’islam.
+            L’esprit dans lequel on visitera le Sénégal sera particulièrement important : le quotidien peut apporter son lot de
+            péripéties qui seront, selon l’ouverture ou la philosophie de chacun, drôles ou irritantes. Pourquoi ne pas adopter
+            l’extraordinaire sens de l’humour sénégalais, fait d’autodérision et d’espièglerie ?
+                </p>
             </div>
        </div>
-       <div class=" col-lg-6 col-md-6 col-sm-12">
+       <!-- <div class=" col-lg-6 col-md-6 col-sm-12">
             <img src="/images/about.jpeg" alt="" class="w-100">
-        </div>
+        </div> -->
        </div>
    </div>
 </section>
@@ -152,10 +163,10 @@
     <div class="row">
         <div class=" col-lg-4 col-md-4 col-sm-6">
             <div class="single-works">
-                <img src="/images/Dakar.3.jpg" alt="">
+                <img src="/images/9.jpg" alt="">
                 <div class="overlay-text">
-                    <h3 class="title">dakar</h3>
-                    <span class="post"><button type="button" class="btn btn-primary">voir</button></span>
+                    <h3 class="title">Dakar</h3>
+                    <a href="/Dakar" class="btn post">Voir plus</a>
                 </div>
             </div>
         </div>
@@ -164,35 +175,34 @@
                 <img src="/images/Somone.jpg" alt="">
                 <div class="overlay-text">
                     <h3 class="title">Somone</h3>
-                    <span class="post">post post</span>
-                    <a href="#" class="btn btn-primary">voir</a>
+                    <a href="/Somone"  class="btn post">voir plus</a>
                 </div>
             </div>
         </div>
         <div class=" col-lg-4 col-md-4 col-sm-6">
             <div class="single-works">
-                <img src="/images/saly5.jpg" alt="">
+                <img src="/images/yyy.jpg" alt="">
                 <div class="overlay-text">
                     <h3 class="title">Saly</h3>
-                    <span class="post"><button type="button" class="btn btn-primary">voir</button></span>
+                    <a href="/Saly" class="btn post">voir plus</a>
                 </div>
             </div>
         </div>
         <div class=" col-lg-4 col-md-4 col-sm-6">
             <div class="single-works">
-                <img src="/images/mbour.jpg" alt="">
+                <img src="/images/12 (2).jpg" alt="">
                 <div class="overlay-text">
-                    <h3 class="title">Mbour</h3>
-                    <span class="post"><button type="button" class="btn btn-primary">voir</button></span>
+                    <h3 class="title">Sine-Saloum</h3>
+                    <a href="/Sine-Saloum" class="btn post">voir plus</a>
                 </div>
             </div>
         </div>
         <div class=" col-lg-4 col-md-4 col-sm-6">
             <div class="single-works">
-                <img src="/images/eglise-de-nianing-2018-senegal.jpg" alt="">
+                <img src="/images/6.jpg" alt="">
                 <div class="overlay-text">
-                    <h3 class="title">Nianing</h3>
-                    <span class="post"><button type="button" class="btn btn-primary">voir</button></span>
+                    <h3 class="title">Popenguine-Ndayane</h3>
+                    <a href="/Popenguine-Ndayane" class="btn post">voir plus</a>
                 </div>
             </div>
         </div>
@@ -200,8 +210,8 @@
             <div class="single-works">
                 <img src="/images/joal.jpg" alt="">
                 <div class="overlay-text">
-                    <h3 class="title">Joal Fadiouth</h3>
-                    <span class="post"><button type="button" class="btn btn-primary">voir</button></span>
+                    <h3 class="title">Joal-Fadiouth</h3>
+                    <a href="/Joal-Fadiouth" class="btn post">voir plus</a>
                 </div>
             </div>
         </div>
@@ -210,7 +220,7 @@
 </div>
 </section>
 
-<section class="gallery">
+<!-- <section class="gallery">
     <div class="container images text-center ">
         <h2 > Gallery</h2>
         <div class="row p-3">
@@ -263,8 +273,7 @@
            
         </div>
     </div>
-    <a href="#" class="btn btn-primary">voir</a>
-</section>
+</section> -->
 
 <footer class="text-center text-lg-start text-white bg-dark" >
      <div class="container-fluid p-4 pb-0">
