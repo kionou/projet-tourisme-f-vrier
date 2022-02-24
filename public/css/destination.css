@@ -10,13 +10,49 @@
     font-size: 1.2rem;
 }
 
-.banner-image{
-    background: url('/images/couvrr.jpg')center no-repeat;
+.banner-dakar{
+    background: url('/images/dakar5.jpeg')center no-repeat;
+    background-size: cover;
+    height: 60vh;
+    width: 100%;   
+}
+
+.banner-somone{
+    background: url('/images/dakar5.jpeg')center no-repeat;
     background-size: cover;
     height: 60vh;
     width: 100%;
-    
 }
+
+.banner-joal{
+    background: url('/images/achtergrond.jpeg')center no-repeat;
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+}
+
+.banner-nianing{
+    background: url('/images/dakar5.jpeg')center no-repeat;
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+}
+
+.banner-saly{
+    background: url('/images/13.jpeg')center no-repeat;
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+}
+
+.banner-sine{
+    background: url('/images/16.jpg')center no-repeat;
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+}
+
+
 .titre{
     color: #fff;
     font-weight: 700;
@@ -31,7 +67,6 @@
 .texte{
     margin-left: auto;
     margin-right: auto;
-    /* width: 6em; */
     text-align: justify;
 }
 
@@ -40,7 +75,7 @@
     padding: 15px;
 }
 .block:hover{
-   -webkit-box-shadow: 0px 0px 9px 10px rgba(0,0,0,0.11);
+-webkit-box-shadow: 0px 0px 9px 10px rgba(0,0,0,0.11);
 -moz-box-shadow: 0px 0px 9px 10px rgba(0,0,0,0.11);
 box-shadow: 0px 0px 9px 10px rgba(0,0,0,0.11);
 }

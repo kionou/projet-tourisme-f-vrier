@@ -6,9 +6,9 @@ $(window).scroll(function() {
 
      //>=, not <=
     if (scroll >= 100) {
-        $(".navbar").addClass("bg-dark");
+        $(".navbar").addClass("bg-white");
     } else {
-      $(".navbar").removeClass("bg-dark");
+      $(".navbar").removeClass("bg-white");
     }
 });
   
