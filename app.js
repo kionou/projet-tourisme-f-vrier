@@ -1,5 +1,25 @@
 const express = require('express');
+const db = require('./database/database');
 const app = express();
+let reservation = require("./router/reservationRouter");
+let expressValidator = require('express-validator');
+
+app.use('/reservation', reservation);
+app.use(expressValidator());
+
+
+
+db.connect(function(err){
+    if (!err) {
+        console.log('connection etabli');
+       
+  
+    } else {
+        console.log(err);
+    }
+
+})
+
 
 app.set('view engine' , 'ejs')
 app.use(express.static('public'));
@@ -36,6 +56,10 @@ app.get('/Saly', (req,res)=>{
    app.get('/Popenguine-Ndayane', (req,res)=>{
     res.render('DestinationNianing')  
    })
+
+//    app.get('/Reservation', (req,res)=>{
+//     res.render('reservation')  
+//    })
 
 
 app.listen(7070)

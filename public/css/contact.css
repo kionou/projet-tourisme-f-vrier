@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.banner-image{
+.banner-dakar{
     background: url('/images/image.jpeg')center no-repeat;
     background-size: cover;
     height: 40vh;
@@ -59,3 +59,8 @@
     -moz-box-shadow: -1px 14px 28px -8px rgba(222,73,222,0.63);
     box-shadow: -1px 14px 28px -8px rgba(222,73,222,0.63) -1px 14px 28px -8px rgba(222,73,222,0.63);
 }  
+
+
+.ville{
+    color: rgb(179, 32, 32);
+}
