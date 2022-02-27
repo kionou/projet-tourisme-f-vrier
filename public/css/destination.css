@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@700&family=Kaushan+Script&display=swap');
 
 *{
     padding: 0;
@@ -8,6 +8,31 @@
     box-sizing: border-box;
     font-family: 'Abhaya Libre', serif;
     font-size: 1.2rem;
+}
+
+
+
+.titre{
+    color: #fff;
+    font-weight: 700;
+    font-style: italic;
+}
+.headerTexte{
+    font-style: oblique;
+    font-weight: 400;
+    font-size: large;
+
+}
+.nav-link{
+    color: #fff !important;
+     font-weight: 400;
+      font-size: 24px;
+}
+
+.navbar-brand{
+    font-style: italic;
+    font-family: 'Charmonman', cursive;
+
 }
 
 .banner-dakar{
