@@ -23,18 +23,16 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 mx-auto">
-
-             <% if(typeof alert != 'undefined') { %>
-                <% alert.forEach(function(error) { %>
-                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                    <%= error.msg%>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                    <!-- <span aria-hidden="true">&times;</span> -->
-
-                    </button>
+                <div class="mt-5">
+                    <% if(typeof alert != 'undefined') { %>
+                        <% alert.forEach(function(error) { %>
+                        <div class="alert alert-warning alert-danger fade show" role="alert">
+                            <%= error.msg%>
+                            <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
+                        </div>
+                        <% }) %>
+                     <% } %>
                 </div>
-                <% }) %>
-             <% } %>
                 <form action="" class="formulaire" method="post">
                     <div class="form p-3">
                         <div class="form-row my-5 ">
@@ -73,6 +71,25 @@
                         </div>
                         <div class=" col-lg-4 pt-3 text-center">
                             <button type="submit" class="btn boutton" >ENVOYER</button>
+                            <div class="modal" tabindex="-1" role="dialog">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title">Modal title</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <p>Modal body text goes here.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
 
                         </div>
                     </div>
@@ -81,6 +98,8 @@
         </div>
     </div>
 </section>
+
+
 
 <%- include('./partials/footet'); %>
 

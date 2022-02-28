@@ -4,10 +4,12 @@ const app = express();
 let reservation = require("./router/reservationRouter");
 
 
+
 // let expressValidator = require('express-validator');
 // app.use(expressValidator());
 
 app.use('/reservation', reservation);
+
 
 db.connect(function(err){
     if (!err) {
@@ -57,9 +59,9 @@ app.get('/Saly', (req,res)=>{
     res.render('DestinationNianing')  
    })
 
-//    app.get('/Reservation', (req,res)=>{
-//     res.render('reservation')  
-//    })
+   app.get('/message', (req,res)=>{
+    res.render('message')  
+   })
 
 
 app.listen(7070)

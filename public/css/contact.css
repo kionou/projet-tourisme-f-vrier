@@ -35,20 +35,24 @@
 .banner-dakar{
     background: url('/images/yy.jpg')center no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 50vh;
     width: 100%;
 }
-.contact{
-    background-color: cornsilk;
+.banner{
+   
+    background: url('/images/yy.jpg')center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
 }
 
 .head{
-    background-color: rgba(185, 19, 185);
+    background-color: rgb(16, 209, 235);
     border-radius: 5px;
     margin-top: -40px;
-    -webkit-box-shadow: -1px 14px 28px -8px rgba(222,73,222,0.63);
-    -moz-box-shadow: -1px 14px 28px -8px rgba(222,73,222,0.63);
-    box-shadow: -1px 14px 28px -8px rgba(222,73,222,0.63) -1px 14px 28px -8px rgba(222,73,222,0.63);
+    /* -webkit-box-shadow: -1px 14px 28px -8px rgb(16, 209, 235);
+    -moz-box-shadow: -1px 14px 28px -8px rgb(16, 209, 235);
+    box-shadow: -1px 14px 28px -8px rgb(16, 209, 235) -1px 14px 28px -8px rgb(16, 209, 235);  */
 }
 
 .effect-1{
@@ -75,7 +79,7 @@
     left: 0;
 } */
 .boutton{
-    background-color: rgba(185, 19, 185);
+    background-color: rgb(16, 209, 235);
     color: white;
     outline: none;
     border: none;
@@ -83,9 +87,9 @@
     width: 145px;
 }
 .boutton:hover{
-    -webkit-box-shadow: -1px 14px 28px -8px rgba(222,73,222,0.63);
-    -moz-box-shadow: -1px 14px 28px -8px rgba(222,73,222,0.63);
-    box-shadow: -1px 14px 28px -8px rgba(222,73,222,0.63) -1px 14px 28px -8px rgba(222,73,222,0.63);
+    -webkit-box-shadow: -1px 14px 28px -8px rgb(16, 209, 235);
+    -moz-box-shadow: -1px 14px 28px -8px rgb(16, 209, 235);
+    box-shadow: -1px 14px 28px -8px rgb(16, 209, 235 )-1px 14px 28px -8px rgb(16, 209, 235);
 }  
 
 
