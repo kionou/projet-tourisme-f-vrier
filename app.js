@@ -2,12 +2,12 @@ const express = require('express');
 const db = require('./database/database');
 const app = express();
 let reservation = require("./router/reservationRouter");
-let expressValidator = require('express-validator');
+
+
+// let expressValidator = require('express-validator');
+// app.use(expressValidator());
 
 app.use('/reservation', reservation);
-app.use(expressValidator());
-
-
 
 db.connect(function(err){
     if (!err) {
