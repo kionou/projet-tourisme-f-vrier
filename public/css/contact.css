@@ -35,15 +35,9 @@
 .banner-dakar{
     background: url('/images/yy.jpg')center no-repeat;
     background-size: cover;
-    height: 50vh;
+    height: 70vh;
     width: 100%;
-}
-.banner{
-   
-    background: url('/images/yy.jpg')center no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
+
 }
 
 .head{
@@ -53,6 +47,9 @@
     /* -webkit-box-shadow: -1px 14px 28px -8px rgb(16, 209, 235);
     -moz-box-shadow: -1px 14px 28px -8px rgb(16, 209, 235);
     box-shadow: -1px 14px 28px -8px rgb(16, 209, 235) -1px 14px 28px -8px rgb(16, 209, 235);  */
+}
+.contact{
+    background-color: rgb(250, 255, 255);
 }
 
 .effect-1{
