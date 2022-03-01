@@ -24,8 +24,11 @@
         <div class="row">
             <div class="col-lg-6 mx-auto">
                <div class="card">
-                   <div class="card-body">
-                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias provident nobis impedit quam, rerum a sed saepe fugit, deserunt sit sunt maiores officiis delectus! Minus repudiandae nesciunt necessitatibus! Quia sed excepturi accusantium? Quibusdam sint placeat, quidem reprehenderit et numquam excepturi non accusamus similique, dolorem, perspiciatis voluptates? Atque explicabo totam iste?</p>
+                   <div class="card-body" style="background-color: rgb(153, 244, 189);">
+                    <% resultat.forEach(function(item) { %>
+                        <p>Salut <samp class="texte"><%= item.nom %></samp> merçi d'avoir faire votre reservation,
+                        nous allons vous envoyés un message a votre email : <samp class="texte"><%= item.email %></samp></p>
+                    <% }) %>
                    </div>
                </div>
             </div>
@@ -34,10 +37,8 @@
 </section>
 
 <div>
-    <% resultat.forEach(function(item) { %>
-    <p><%= item.nom %></p>
-<% }) %>
-</div>
+   
+</div> 
 
 
 <%- include('./partials/footet'); %>
