@@ -5,9 +5,8 @@ let reservation = require("./router/reservationRouter");
 
 
 
-// let expressValidator = require('express-validator');
-// app.use(expressValidator());
-
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 app.use('/reservation', reservation);
 
 
@@ -59,9 +58,9 @@ app.get('/Saly', (req,res)=>{
     res.render('DestinationNianing')  
    })
 
-   app.get('/message', (req,res)=>{
-    res.render('message')  
-   })
+//    app.get('/message', (req,res)=>{
+//     res.render('message')  
+//    })
 
 
 app.listen(7070)
