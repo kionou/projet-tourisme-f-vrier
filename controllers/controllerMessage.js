@@ -6,7 +6,9 @@ const data = require("../requet/requet");
 
 const msg = class{
     static message =(req=request,res=response) =>{
-            console.log(req.params.id,"eeeeeeeeeeeee");
+        
+           console.log("eeerghhj",req.query.id);
+
             db.query(`SELECT * FROM clients WHERE id = ${req.params.id}`, (err,resultat)=>{
                     // console.log("rfrfederrfrfdre",resultat);
                     if (err) {
@@ -23,8 +25,9 @@ const msg = class{
 
     static reservation =  (req=request,res=response)=>{
         console.log(req.body,"aaaaaaaa");
+        console.log(req.params.id);
        data.insertion(req.body)
-        res.redirect('reservation/message/id')
+        res.redirect(`reservation/message/id`)
         
         
     }

@@ -3,8 +3,9 @@ const db = require("../database/database");
 
 
 const data = class{
-// static selection = (base)=>{
-    // return  db.query(`SELECT * FROM clients WHERE id = ${req.params.id}`,
+static selection = ()=>{
+  
+    // return  db.query(`SELECT * FROM clients WHERE id = ${res.insertId}`,
     
     // (err,resultat)=>{
     //     console.log("rfrfederrfrfdre",resultat);
@@ -17,16 +18,18 @@ const data = class{
     //          }
     //   }
     // )
-// }
+}
 
-static insertion = (into)=>{
+static insertion = (into,result)=>{
     console.log(into);
     let{nom,prenom,email,numero,ville} = into
         let sql= "INSERT INTO `clients`(`nom`, `prenom`, `email`, `numero`, `ville`) VALUES (?,?,?,?,?)"; 
-    return  db.query(sql,[nom,prenom,email,numero,ville],(err,res)=>{
+   
+          db.query(sql,[nom,prenom,email,numero,ville],(err,res)=>{
             if (!err) {
-                console.log("rrrrrrrrttttyyuiuui",result);
-                // res.redirect(`reservation/message/id/${result.insertId}`)
+                console.log("rrrrrrrrttttyyuiuui",res);
+                console.log(res.insertId);
+                return {result:res.insertId}
             } else {
                 console.log(err);
                 return {error:err};
