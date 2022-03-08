@@ -4,21 +4,18 @@ const db = require("../database/database");
 
 
 const data = class{
-static selection = ()=>{
-  
-    // return  db.query(`SELECT * FROM clients WHERE id = ${res.insertId}`,
-    
-    // (err,resultat)=>{
-    //     console.log("rfrfederrfrfdre",resultat);
-    //     if (err) {
-    //      console.log(err);
-    //     return {error:err}
-    //          }else{
-    //           res.render('../views/message', {resultat})
-    //           console.log("derftthuyuu",resultat);
-    //          }
-    //   }
-    // )
+static selection = (req)=>{
+        return new Promise((resolve,reject)=>
+        db.query(`SELECT * FROM clients WHERE id = ${req.params.id}`, (err,resultat)=>{   
+            if (err) {
+            console.log(err);
+            reject(err)
+                 }else{
+                 console.log(resultat);
+                 resolve(resultat)
+              
+                 }
+          }))    
 }
 
 static insertion = (into)=>{
@@ -29,7 +26,7 @@ static insertion = (into)=>{
     return new Promise((resolve,reject)=>
     db.query(sql,[nom,prenom,email,numero,ville],(err,res)=>{
         if (!err) {
-            console.log("rrrrrrrrttttyyuiuui",res);
+            // console.log("rrrrrrrrttttyyuiuui",res);
             console.log(res.insertId);
           resolve(res)
         } else {
