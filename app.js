@@ -63,4 +63,6 @@ app.get('/Saly', (req,res)=>{
 //    })
 
 
-app.listen(7070)
+app.listen(7070, ()=>{
+    console.log('connection etabli sur le port 7070');
+})

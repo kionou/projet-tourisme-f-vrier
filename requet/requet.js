@@ -1,3 +1,4 @@
+const { promiseImpl } = require("ejs");
 const db = require("../database/database");
 
 
@@ -20,21 +21,25 @@ static selection = ()=>{
     // )
 }
 
-static insertion = (into,result)=>{
+static insertion = (into)=>{
     console.log(into);
     let{nom,prenom,email,numero,ville} = into
         let sql= "INSERT INTO `clients`(`nom`, `prenom`, `email`, `numero`, `ville`) VALUES (?,?,?,?,?)"; 
-   
-          db.query(sql,[nom,prenom,email,numero,ville],(err,res)=>{
-            if (!err) {
-                console.log("rrrrrrrrttttyyuiuui",res);
-                console.log(res.insertId);
-                return {result:res.insertId}
-            } else {
-                console.log(err);
-                return {error:err};
-            }
-        })
+        
+    return new Promise((resolve,reject)=>
+    db.query(sql,[nom,prenom,email,numero,ville],(err,res)=>{
+        if (!err) {
+            console.log("rrrrrrrrttttyyuiuui",res);
+            console.log(res.insertId);
+          resolve(res)
+        } else {
+            console.log(err);
+            reject(err)
+        }
+
+    }))
+       
+       
 }
 }
 
