@@ -3,14 +3,8 @@ let router= express.Router();
 const msg = require('../controllers/controllerMessage');
 
 
-router.get('/',(req,res) =>{
-    res.render('../views/reservation')
-})
-
-
+router.get('/',msg.reserver)
 router.get('/message/:id',msg.message)
-
-
 router.post('/',msg.reservation,)
 
 

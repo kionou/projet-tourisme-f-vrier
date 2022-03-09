@@ -1,6 +1,5 @@
 let mysql = require('mysql')
 
-
 let db = mysql.createConnection({
     
     host:'192.168.64.2',

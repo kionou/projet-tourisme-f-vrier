@@ -4,6 +4,10 @@ const data = require("../requet/requet");
 
 
 const msg = class{
+    static reserver = (req=request,res=response) =>{
+            res.render('../views/reservation')   
+    }
+
     static message =(req=request,res=response) =>{
         data.selection(req).then(suc=>{
             res.render('../views/message', {suc})
@@ -20,10 +24,6 @@ const msg = class{
          }).catch(err=>{
             res.redirect(`/error404`)
          })
-        
-        
-        
-        
     }
 }
 
