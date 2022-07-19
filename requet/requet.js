@@ -1,38 +1,55 @@
-const db = require("../database/database");
+const sequelize = require('../database/database');
+const { Sequelize } = require('../models');
+const clients = require('../models/clients');
+const client = clients(sequelize,Sequelize);
 
 
 
 const data = class{
-static selection = (req)=>{
-        return new Promise((resolve,reject)=>
-        db.query(`SELECT * FROM clients WHERE id = ${req.params.id}`, (err,resultat)=>{   
-            if (err) {
-                console.log(err);
-                reject(err)
-            }else{
-                console.log(resultat);
-                resolve(resultat)
-              
-                }
-          }))    
+static selection = (into)=>{
+
+    return new Promise(async (next)=>{
+        client.findAll({where:{
+            id:into
+        }}).then(resultat => {
+            console.log('resultat',resultat);
+            next({success:resultat})
+        }).catch(error  =>{
+            console.log('error',error);
+              next({erreur:error})
+        }) 
+    })
+
+        
 }
 
-static insertion = (into)=>{
-    console.log(into);
-    let{nom,prenom,email,numero,ville} = into
-    let sql= "INSERT INTO `clients`(`nom`, `prenom`, `email`, `numero`, `ville`) VALUES (?,?,?,?,?)"; 
-        
-    return new Promise((resolve,reject)=>
-    db.query(sql,[nom,prenom,email,numero,ville],(err,res)=>{
-        if (!err) {
-            console.log(res.insertId);
-            resolve(res)
-        } else {
-            console.log(err);
-            reject(err)
-        }
-    }))            
-  }
+
+
+
+static InsertionUser=  (into)=>{
+    console.log('innnto',into);
+    return   client.sync({force:true}).then(()=>{
+        let{nom,prenom,email,numero,ville} = into
+        return new Promise(async (next)=>{
+           client.create({nom,prenom,email,numero,ville})
+            .then(resultat=>{
+            console.log('ss',resultat);
+            next({
+            success:resultat
+            })
+        }).catch(err=>{
+            console.log("eee",err);
+            next ({
+                erreur:err
+            })
+        })
+    })
+    }).catch(err=>{
+        console.log('rrroorr',err);
+    })
+  
+}
+
 }
 
 module.exports= data;

@@ -1,12 +1,12 @@
 const express = require('express');
-const db = require('./database/database');
 const app = express();
 let reservation = require("./router/inscriptionRouter");
-let accueil = require("./router/indexRouter")
+let accueil = require("./router/indexRouter");
+const sequelize = require('./database/database');
 
 
-db.connect(function(err){
-    if (!err) {
+try {
+    sequelize.authenticate()
         console.log('connection etabli');   
         app.set('view engine' , 'ejs')
         app.use(express.static('public'));
@@ -15,11 +15,10 @@ db.connect(function(err){
         app.use('/', accueil);
         app.use('/reservation', reservation);
 
-    } else {
-        console.log(err);
+    }  catch (error){
+        
+        console.log('connection echec ' + JSON.stringify(err , undefined ,2),err); 
     }
-
-})
 
 
 
